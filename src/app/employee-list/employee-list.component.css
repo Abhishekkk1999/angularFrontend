@@ -1,0 +1,6 @@
+.abc{
+    transition: all 0.7s ease;
+}
+.abc:hover{
+    transform:scale(1.2);
+}

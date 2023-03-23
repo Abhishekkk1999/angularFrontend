@@ -1,0 +1,26 @@
+<div class="alert alert-success" *ngIf="(message)=='deleted'"><h4>item deleted</h4></div>
+<table class ="table table-striped">
+    <thead>
+        <tr>
+            <th> First Name</th>
+            <th> Last Name</th>
+            <th> Email Id</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let employee of employees">
+            <td>{{ employee.firstName}}</td>
+            <td>{{ employee.lastName}}</td>
+            <td>{{ employee.emailId}}</td>
+
+            <td><button class="btn btn-outline-primary  mx-1 abc" routerLink="/details/{{employee.id}}"><i class="fa fa-user"></i></button>
+            
+                <button class="btn btn-outline-success  mx-1 abc" routerLink="/update/{{employee.id}}"><i class="fa fa-pencil-square-o"></i></button>
+                
+            <button class="btn btn-outline-danger mx-1 abc" (click)="ondelete(employee.id)"><i class="fa fa-trash-o"></i></button></td>
+
+        </tr>
+    </tbody>
+</table>
+
+
